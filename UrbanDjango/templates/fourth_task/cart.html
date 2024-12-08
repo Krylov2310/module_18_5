@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ base_title }}</title>
+</head>
+<body>
+    <h3 align="center"><u>{{ base_name}}</u></h3>
+    <h5 align="center">{{ base_tsul }}</h5>
+    <h5 align="center">{{ base_student}}</h5>
+    <h5 align="center">{{ base_time }}</h5>
+    <h1 align="center">{{ base_title }}</h1>
+    {% for j, i in menu.items %}
+        {% for k in i %}
+            <h2 align="center"><a href='{{ k }}'>{{ j }}</a></h2>
+        {% endfor %}
+    {% endfor %}
+    {% for l, m in content.items %}
+        {% for n in m %}
+            <ul>
+                <li><h2>{{ l }}: {{ n }} - <a href="http://127.0.0.1:8000/cart/"><button>Купить</button></a></h2></li>
+            </ul>
+        {% endfor %}
+    {% endfor %}
+    <h2 align="center">{{ base_cart }}</h2>
+</body>
+</html>
